@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 30px 15px;
+}
+
+/* Creamos nuestra áreas */
+.grid-area {
+    display: grid;
+    margin: 15px;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 5px;
+    height: 100vh;
+
+    grid-template-areas: 
+    "header header header"
+    "sidebar . main"
+    "footer footer footer"
+    ;
+}
+
+/* Asignamos nuestra áreas */
+header {
+    grid-area: header;
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: larger;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    padding: 10px;
+}

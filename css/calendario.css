@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 6px solid lightcoral;
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    width: 800px;
+    color: brown;
+    font-size: 1rem;
+    place-items: start end;
+    margin-bottom: 8px;
+}
+
+.calendario-grid {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    /* gap: 4px; */
+    width: 800px;
+    height: 600px;
+    background-color: antiquewhite;
+    border: 1px solid lightcoral;
+    
+    .dia {
+        display: grid;
+        place-items: start end;
+        color: brown;
+        border: 1px solid lightcoral;
+        font-size: 1.4rem;
+
+        counter-increment: number 1;
+
+        &::after {
+            content: counter(number);  
+        }
+
+        &:nth-child(8) {
+            background-color: lightcoral;
+            color: black;
+        }
+
+        &:nth-child(25) {
+            background-color: lightcoral;
+            color: black;
+        }
+    }
+    
+}

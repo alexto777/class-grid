@@ -1,59 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h1, h2, h3 {
-    font-family: "Playwrite GB S", Arial, Helvetica, sans-serif;
-}
-
-header, footer {
+/* Estilos del encabezado */
+header {
+    background-color: lightseagreen;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
-    background-color: #002e8b;
-    color: white;
+    margin-bottom: 20px;
 }
 
-main {
-    text-align: center;
+/* Contenedor principal usando CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.columna {
-    display: inline-block;
-    width: 30%;
-    height: auto;
-    background-color: #f3f3f3;
-    vertical-align: top;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
-
-.columna p {
-    margin: 20px;
+/* Estilos de cada ítem de la grid */
+.grid-item {
+    background-color: #ffffff;
     padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.columna a {
-    /* display: none; */
-    color: #292929;
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Estilos de los enlaces */
+.grid-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: lightseagreen;
+    color: #ffffff;
     text-decoration: none;
-    /* border */
-    /* Modelo de caja */
-    background-color: #002e8b;
-    font-size: larger;
-    color: white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
+.grid-item a:hover {
+    background-color: #1f2a30;
+}
+
+.item5 {
+    margin-bottom: 50px;
+
+}
+
+/* Estilos del pie de página */
 footer {
-    height: 50px;
-    vertical-align: auto;
+    background-color: lightseagreen;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
